@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Have A Girlfriend?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+            background-color: #f4f4f4;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes { background-color: #4CAF50; color: white; }
+        .no { background-color: #FF0000; color: white; }
+    </style>
+</head>
+<body>
+    <h1 id="question">Do You Have A Girlfriend?</h1>
+    <button class="yes" onclick="answerYes()">Yes</button>
+    <button class="no" onclick="answerNo()">No</button>
+
+    <script>
+        function answerYes() {
+            document.body.innerHTML = '<h1>Good Job</h1>';
+            setTimeout(() => location.reload(), 2000);
+        }
+        
+        function answerNo() {
+            document.body.innerHTML = '<h1>Well, get a fucking girlfriend</h1>' +
+                                      '<p>Is she bad as fuck?</p>' +
+                                      '<button class="yes" onclick="alert(\'Hell yeah!\')">Hell Yeah</button>' +
+                                      '<button class="no" onclick="alert(\'Yeah!\')">Yeah</button>';
+        }
+    </script>
+</body>
+</html>
